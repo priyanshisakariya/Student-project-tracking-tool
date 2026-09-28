@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 70px;
+
+    background: rgba(5,18,43,0.82);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    z-index: 9999;
+}
+
+
+/* IMPORTANT:
+   Gives space below fixed header
+*/
+.page-content {
+    padding-top: 80px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* LOGIN DROPDOWN */
+
+.login-dropdown {
+    position: relative;
+}
+
+
+.dropdown-menu {
+
+    position: absolute;
+
+    top: 50px;
+    right: 0;
+
+    width: 220px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition: .3s;
+
+    z-index: 9999;
+}
+
+
+.login-dropdown:hover .dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+.dropdown-menu a {
+
+    display: block;
+
+    padding: 15px 20px;
+
+    color: #173B63;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: .3s;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+.dropdown-icon{
+
+    font-size:18px;
+
+    color:#2F80ED;
+
+}
+
+.dropdown-menu a:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.dropdown-menu a:hover {
+
+    background: #F4F8FF;
+
+    color: #2F80ED;
+
+    padding-left: 28px;
+
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+
+    display: flex;
+
+    gap: 45px;
+
+}
+
+
+.navbar a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    position: relative;
+
+    transition: .3s;
+
+}
+
+
+.navbar a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -6px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #48A6FF;
+
+    transition: .3s;
+
+}
+
+
+.navbar a:hover::after {
+
+    width: 100%;
+
+}
+
+
+.navbar a:hover {
+
+    color: #7FC9FF;
+
+}
+
+
+/* Button Container */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Common Button Style */
+.auth-buttons button {
+    min-width: 110px;
+    height: 42px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login Button */
+.login-btn {
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.login-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+/* Register Button */
+.register-btn {
+    background: #ffffff;
+    color: #0f172a;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.register-btn:hover {
+    background: #f8fafc;
+    color: #2563eb;
+    border-color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1024px){
+
+    .header{
+
+        padding:0 25px;
+
+    }
+
+    .navbar{
+
+        gap:20px;
+
+    }
+
+}

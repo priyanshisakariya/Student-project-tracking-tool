@@ -1,0 +1,177 @@
+.review-page {
+    padding: 30px;
+    background: #f5f7fb;
+    min-height: 100vh;
+}
+
+.review-header h1 {
+    font-size: 30px;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.review-header p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.review-toolbar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.review-toolbar input,
+.review-toolbar select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 15px;
+}
+
+.review-toolbar input {
+    flex: 1;
+}
+
+.proposal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    gap: 20px;
+}
+
+.proposal-card {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.proposal-card:hover {
+    transform: translateY(-5px);
+}
+
+.proposal-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+}
+
+.pending {
+    background: #f39c12;
+}
+
+.approved {
+    background: #27ae60;
+}
+
+.rejected {
+    background: #e74c3c;
+}
+
+.proposal-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.view-btn {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    background: #2f80ed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background: #1768d6;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proposal-modal {
+    width: 700px;
+    max-width: 95%;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    animation: popup .25s ease;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.proposal-modal p {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.approve {
+    background: #27ae60;
+}
+
+.reject {
+    background: #e74c3c;
+}
+
+.changes {
+    background: #f39c12;
+}
+
+.close-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #555;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #333;
+}

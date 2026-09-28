@@ -1,0 +1,375 @@
+/* ==========================================
+            MY MARKS PAGE
+========================================== */
+
+*{
+    box-sizing: border-box;
+}
+
+.marks-container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:30px;
+
+}
+
+.page-title{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+    margin-bottom:8px;
+
+}
+
+.page-subtitle{
+
+    color:#64748b;
+
+    margin-bottom:30px;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+                CARD
+========================================== */
+
+.marks-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    margin-bottom:25px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+            CARD TITLE
+========================================== */
+
+.card-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#1f2937;
+
+    margin-bottom:25px;
+
+}
+
+.card-icon{
+
+    color:#2563eb;
+
+    font-size:24px;
+
+}
+
+/* ==========================================
+          PROJECT DETAILS
+========================================== */
+
+.details-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+
+}
+
+.detail-item{
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    padding:18px;
+
+}
+
+.detail-label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#64748b;
+
+    font-size:14px;
+
+    margin-bottom:10px;
+
+}
+
+.detail-icon{
+
+    color:#2563eb;
+
+}
+
+.detail-value{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#1f2937;
+
+}
+
+.status{
+
+    display:inline-block;
+
+    padding:6px 15px;
+
+    border-radius:25px;
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+              MARKS TABLE
+========================================== */
+
+.marks-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.marks-table th{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:14px;
+
+    text-align:left;
+
+}
+
+.marks-table td{
+
+    padding:14px;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.marks-table tbody tr:hover{
+
+    background:#eff6ff;
+
+}
+
+.marks-table tfoot th{
+
+    background:#1d4ed8;
+
+    color:white;
+
+}
+
+/* ==========================================
+            FACULTY FEEDBACK
+========================================== */
+
+.feedback-section{
+
+    margin-bottom:25px;
+
+}
+
+.feedback-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+.feedback-icon{
+
+    font-size:18px;
+
+}
+
+.feedback-list{
+
+    padding-left:25px;
+
+    color:#374151;
+
+    line-height:2;
+
+}
+
+.overall-comment{
+
+    background:#f8fafc;
+
+    padding:18px;
+
+    border-left:5px solid #2563eb;
+
+    border-radius:10px;
+
+    line-height:1.8;
+
+    color:#374151;
+
+}
+
+/* ==========================================
+            RESULT CARD
+========================================== */
+
+.result-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.result-item{
+
+    background:#f8fafc;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    transition:.3s;
+
+}
+
+.result-item:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 8px 20px rgba(37,99,235,.15);
+
+}
+
+.result-icon{
+
+    font-size:30px;
+
+    color:#2563eb;
+
+}
+
+.result-item h4{
+
+    margin-bottom:6px;
+
+    color:#374151;
+
+}
+
+.result-item p{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#1f2937;
+
+}
+
+.success{
+
+    color:#16a34a;
+
+}
+
+.pass{
+
+    color:#16a34a;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .marks-container{
+
+        padding:20px;
+
+    }
+
+    .marks-table{
+
+        display:block;
+
+        overflow-x:auto;
+
+    }
+
+    .page-title{
+
+        font-size:24px;
+
+    }
+
+}

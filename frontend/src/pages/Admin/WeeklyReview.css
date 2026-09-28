@@ -1,0 +1,938 @@
+/* =========================================================
+   PAGE
+========================================================= */
+
+.weekly-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 35px;
+  box-sizing: border-box;
+
+  background: #f5f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.weekly-header {
+  margin-bottom: 25px;
+}
+
+.weekly-header h1 {
+  margin: 0 0 7px;
+
+  color: #172b4d;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.weekly-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.weekly-toolbar {
+  display: flex;
+
+  gap: 15px;
+
+  width: 100%;
+
+  margin-bottom: 25px;
+}
+
+.weekly-toolbar input,
+.weekly-toolbar select {
+  height: 46px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d9dee7;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.weekly-toolbar input {
+  flex: 1;
+}
+
+.weekly-toolbar select {
+  width: 220px;
+}
+
+.weekly-toolbar input:focus,
+.weekly-toolbar select:focus {
+  border-color: #2f80ed;
+
+  box-shadow:
+    0 0 0 3px rgba(47, 128, 237, 0.1);
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-message {
+  margin-bottom: 20px;
+
+  padding: 13px 16px;
+
+  border: 1px solid #f3b5b5;
+
+  border-radius: 8px;
+
+  background: #fff1f1;
+
+  color: #c62828;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   NO DATA
+========================================================= */
+
+.no-data {
+  padding: 50px 20px;
+
+  text-align: center;
+
+  border: 1px solid #e3e7ee;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+}
+
+.no-data h3 {
+  margin: 0 0 8px;
+
+  color: #172b4d;
+
+  font-size: 19px;
+}
+
+.no-data p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.weekly-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+.weekly-card {
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e2e6ed;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.05);
+
+  transition: 0.2s ease;
+}
+
+.weekly-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   STUDENT HEADER
+========================================================= */
+
+.weekly-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 15px;
+}
+
+.student-info h3 {
+  margin: 0 0 4px;
+
+  color: #172b4d;
+
+  font-size: 17px;
+}
+
+.student-info span {
+  color: #7b8493;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status-approved,
+.status-submitted,
+.status-improvement {
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.status-approved {
+  background: #e7f7ed;
+
+  color: #218739;
+}
+
+.status-submitted {
+  background: #eaf2ff;
+
+  color: #2868c7;
+}
+
+.status-improvement {
+  background: #fff3df;
+
+  color: #b66a00;
+}
+
+
+/* =========================================================
+   WEEK
+========================================================= */
+
+.week-row {
+  margin-bottom: 15px;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-container {
+  margin-bottom: 18px;
+}
+
+.progress-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+
+  color: #6b7280;
+
+  font-size: 12px;
+}
+
+.progress-header strong {
+  color: #2f80ed;
+}
+
+.progress-bar {
+  width: 100%;
+
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #e7ebf0;
+}
+
+.progress-fill {
+  height: 100%;
+
+  border-radius: 10px;
+
+  background: #2f80ed;
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.view-btn {
+  width: 100%;
+
+  height: 42px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #2f80ed;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #1769d3;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.weekly-review-overlay {
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  z-index: 99999 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  padding: 20px !important;
+
+  box-sizing: border-box !important;
+
+  background: rgba(15, 23, 42, 0.68) !important;
+
+  overflow: hidden !important;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.weekly-review-modal {
+  position: relative !important;
+
+  width: 900px !important;
+
+  max-width: calc(100vw - 40px) !important;
+
+  height: 90vh !important;
+
+  max-height: 90vh !important;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  padding: 0 !important;
+
+  box-sizing: border-box !important;
+
+  overflow: hidden !important;
+
+  border-radius: 16px !important;
+
+  background: #ffffff !important;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.review-modal-header {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 26px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  background: #ffffff;
+}
+
+.review-modal-header h2 {
+  margin: 0 0 4px;
+
+  color: #172b4d;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+.review-modal-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   X BUTTON
+========================================================= */
+
+.modal-x-btn {
+  flex-shrink: 0;
+
+  width: 36px;
+
+  height: 36px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f1f3f6;
+
+  color: #4b5563;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.modal-x-btn:hover {
+  background: #e5e7eb;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.review-summary {
+  flex-shrink: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 12px;
+
+  padding: 15px 26px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  background: #f8fafc;
+}
+
+.summary-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+}
+
+.summary-item span {
+  color: #7b8493;
+
+  font-size: 11px;
+
+  font-weight: 500;
+}
+
+.summary-item strong {
+  color: #172b4d;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   SCROLLABLE BODY
+========================================================= */
+
+.review-modal-body {
+  flex: 1;
+
+  min-height: 0;
+
+  padding: 24px 26px;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY SCROLLBAR
+========================================================= */
+
+.review-modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.review-modal-body::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+.review-modal-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+
+  background: #c5cbd4;
+}
+
+
+/* =========================================================
+   REVIEW SECTION
+========================================================= */
+
+.review-section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  margin-bottom: 9px;
+
+  color: #172b4d;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PROJECT BOX
+========================================================= */
+
+.project-box {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding: 14px 16px;
+
+  border: 1px solid #e1e6ed;
+
+  border-radius: 9px;
+
+  background: #f8fafc;
+}
+
+.project-box span {
+  color: #7b8493;
+
+  font-size: 11px;
+}
+
+.project-box strong {
+  color: #253858;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTENT BOX
+========================================================= */
+
+.content-box {
+  padding: 14px 16px;
+
+  border: 1px solid #e1e6ed;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #4b5563;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  white-space: pre-wrap;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+.large-text {
+  min-height: 70px;
+
+  background: #fafbfc;
+}
+
+
+/* =========================================================
+   GITHUB
+========================================================= */
+
+.github-link {
+  display: block;
+
+  padding: 13px 15px;
+
+  border: 1px solid #dce3ed;
+
+  border-radius: 8px;
+
+  color: #2f80ed;
+
+  background: #f8fafc;
+
+  font-size: 13px;
+
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   FEEDBACK
+========================================================= */
+
+.feedback-section {
+  margin-bottom: 10px;
+}
+
+.faculty-feedback {
+  display: block;
+
+  width: 100%;
+
+  min-height: 120px;
+
+  padding: 13px 15px;
+
+  box-sizing: border-box;
+
+  resize: vertical;
+
+  border: 1px solid #d4dae3;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.faculty-feedback:focus {
+  border-color: #2f80ed;
+
+  box-shadow:
+    0 0 0 3px rgba(47, 128, 237, 0.1);
+}
+
+.faculty-feedback:disabled {
+  background: #f3f4f6;
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.review-modal-footer {
+  flex-shrink: 0;
+
+  display: flex;
+
+  gap: 10px;
+
+  padding: 15px 26px;
+
+  border-top: 1px solid #e5e7eb;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER BUTTONS
+========================================================= */
+
+.review-modal-footer button {
+  min-height: 42px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.review-modal-footer button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   APPROVE
+========================================================= */
+
+.approve-btn {
+  flex: 1;
+
+  border: none;
+
+  background: #22a05a;
+
+  color: #ffffff;
+}
+
+.approve-btn:hover:not(:disabled) {
+  background: #198c4c;
+}
+
+
+/* =========================================================
+   NEEDS IMPROVEMENT
+========================================================= */
+
+.improve-btn {
+  flex: 1;
+
+  border: none;
+
+  background: #e99a18;
+
+  color: #ffffff;
+}
+
+.improve-btn:hover:not(:disabled) {
+  background: #d4870b;
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.close-btn {
+  flex: 0.6;
+
+  border: 1px solid #d5dbe5;
+
+  background: #ffffff;
+
+  color: #4b5563;
+}
+
+.close-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .weekly-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .weekly-page {
+    padding: 25px;
+  }
+
+  .weekly-review-modal {
+    width: 800px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .weekly-page {
+    padding: 20px 15px;
+  }
+
+  .weekly-toolbar {
+    flex-direction: column;
+  }
+
+  .weekly-toolbar input,
+  .weekly-toolbar select {
+    width: 100%;
+  }
+
+  .weekly-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weekly-review-overlay {
+    padding: 10px !important;
+  }
+
+  .weekly-review-modal {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    height: 94vh !important;
+
+    max-height: 94vh !important;
+
+    border-radius: 12px !important;
+  }
+
+  .review-modal-header {
+    padding: 18px;
+  }
+
+  .review-modal-header h2 {
+    font-size: 19px;
+  }
+
+  .review-summary {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    padding: 12px 18px;
+  }
+
+  .review-modal-body {
+    padding: 20px 18px;
+  }
+
+  .review-modal-footer {
+    padding: 12px 18px;
+
+    flex-direction: column;
+  }
+
+  .review-modal-footer button {
+    width: 100%;
+
+    flex: none;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREEN
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .review-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .weekly-review-modal {
+    height: 96vh !important;
+
+    max-height: 96vh !important;
+  }
+}

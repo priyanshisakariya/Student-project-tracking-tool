@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   TOPBAR
+========================================== */
+
+.topbar{
+
+    height:75px;
+
+    background:#173B63;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.15);
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+/* ==========================================
+   LEFT SECTION
+========================================== */
+
+.top-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.menu-btn{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.12);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.menu-btn svg{
+
+    font-size:22px;
+
+    color:#ffffff;
+
+}
+
+.menu-btn:hover{
+
+    background:#2F80ED;
+
+}
+
+.portal-title{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin:0;
+
+}
+
+/* ==========================================
+   RIGHT SECTION
+========================================== */
+
+.user-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+/* ==========================================
+   NOTIFICATION
+========================================== */
+
+.notification{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.notification svg{
+
+    font-size:20px;
+
+    color:#ffffff;
+
+}
+
+.notification:hover{
+
+    background:#2F80ED;
+
+}
+
+/* ==========================================
+   PROFILE
+========================================== */
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:rgba(255,255,255,.10);
+
+    padding:8px 16px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+.profile-img{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid #ffffff;
+
+}
+
+.profile-info h4{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin:0;
+
+}
+
+.profile-info p{
+
+    font-size:13px;
+
+    color:#dbeafe;
+
+    margin-top:3px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.topbar{
+
+    padding:0 15px;
+
+}
+
+.portal-title{
+
+    font-size:22px;
+    margin-left: 300px;
+}
+
+.profile-info{
+
+    display:none;
+
+}
+
+.user-section{
+
+    gap:12px;
+
+}
+
+}

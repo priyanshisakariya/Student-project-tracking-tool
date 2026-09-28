@@ -1,0 +1,311 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   GLOBAL
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+    color:#1f2937;
+}
+
+.profile-page{
+    width:100%;
+    min-height:100vh;
+    padding:35px;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.profile-header{
+    margin-bottom:30px;
+}
+
+.profile-header h1{
+    font-size:34px;
+    font-weight:700;
+    color:#111827;
+}
+
+.profile-header p{
+    margin-top:8px;
+    color:#6b7280;
+    font-size:15px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.profile-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:35px;
+    border:1px solid #e5e7eb;
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.05),
+        0 2px 8px rgba(0,0,0,.03);
+}
+
+/* ==========================================
+   PROFILE IMAGE
+========================================== */
+
+.profile-image-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.profile-image{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#4b5563,#1f2937);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:50px;
+    font-weight:700;
+    border:5px solid #fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    margin-bottom:20px;
+}
+
+/* ==========================================
+   CHANGE PHOTO BUTTON
+========================================== */
+
+.change-photo-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    border:none;
+    border-radius:10px;
+    padding:11px 20px;
+    background:#374151;
+    color:#fff;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.change-photo-btn:hover{
+    background:#1f2937;
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+   FORM SECTION
+========================================== */
+
+.form-section{
+    margin-bottom:35px;
+}
+
+.form-section h2{
+    font-size:21px;
+    color:#111827;
+    margin-bottom:22px;
+    padding-bottom:12px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#4b5563;
+}
+
+.form-group input{
+    height:50px;
+    padding:0 16px;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    background:#f9fafb;
+    font-size:15px;
+    transition:.25s;
+}
+
+.form-group input:hover{
+    border-color:#9ca3af;
+}
+
+.form-group input:focus{
+    outline:none;
+    background:#fff;
+    border-color:#111827;
+    box-shadow:0 0 0 4px rgba(17,24,39,.08);
+}
+
+.form-group input[readonly]{
+    background:#f3f4f6;
+    color:#6b7280;
+    cursor:not-allowed;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.button-group{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+    margin-top:20px;
+}
+
+/* SAVE */
+
+.save-btn{
+    background:#111827;
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:12px 30px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+    box-shadow:0 8px 18px rgba(17,24,39,.20);
+}
+
+.save-btn:hover{
+    background:#000;
+    transform:translateY(-2px);
+}
+
+/* RESET */
+
+.reset-btn{
+    background:#f3f4f6;
+    color:#374151;
+    border:1px solid #d1d5db;
+    border-radius:12px;
+    padding:12px 30px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.reset-btn:hover{
+    background:#e5e7eb;
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#cbd5e1;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#94a3b8;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .profile-page{
+        padding:20px;
+    }
+
+    .profile-card{
+        padding:25px;
+    }
+
+    .profile-header h1{
+        font-size:28px;
+    }
+
+    .profile-image{
+        width:120px;
+        height:120px;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+    .save-btn,
+    .reset-btn{
+        width:100%;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .profile-page{
+        padding:15px;
+    }
+
+    .profile-card{
+        padding:20px;
+    }
+    
+
+    .profile-header h1{
+        font-size:24px;
+    }
+
+    .form-section h2{
+        font-size:19px;
+    }
+
+    .profile-image{
+        width:100px;
+        height:100px;
+    }
+
+}

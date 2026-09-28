@@ -1,0 +1,32 @@
+/* ===========================
+   Status Badge
+=========================== */
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:6px 14px;
+    border-radius:999px;
+
+    font-size:13px;
+    font-weight:600;
+
+    min-width:90px;
+    letter-spacing:0.3px;
+}
+
+/* Active */
+.badge.active{
+    background:#DCFCE7;
+    color:#15803D;
+    border:1px solid #86EFAC;
+}
+
+/* Leave */
+.badge.leave{
+    background:#FEE2E2;
+    color:#DC2626;
+    border:1px solid #FCA5A5;
+}

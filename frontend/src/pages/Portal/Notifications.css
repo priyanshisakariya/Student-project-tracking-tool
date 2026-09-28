@@ -1,0 +1,245 @@
+/* ==========================================
+            NOTIFICATIONS PAGE
+========================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+.notifications-container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:30px;
+
+}
+
+.page-title{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+    margin-bottom:8px;
+
+}
+
+.page-subtitle{
+
+    color:#64748b;
+
+    margin-bottom:30px;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+            NOTIFICATION CARD
+========================================== */
+
+.notification-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:16px;
+
+    padding:22px;
+
+    margin-bottom:18px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.notification-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 24px rgba(0,0,0,.12);
+
+}
+
+.notification-left{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.notification-right{
+
+    flex:1;
+
+}
+
+.notification-right h3{
+
+    font-size:19px;
+
+    color:#1f2937;
+
+    margin-bottom:8px;
+
+}
+
+.notification-right p{
+
+    color:#4b5563;
+
+    line-height:1.6;
+
+    margin-bottom:10px;
+
+}
+
+.notification-right span{
+
+    color:#9ca3af;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+                ICONS
+========================================== */
+
+.notification-icon{
+
+    font-size:28px;
+
+}
+
+.proposal{
+
+    color:#2563eb;
+
+}
+
+.weekly{
+
+    color:#16a34a;
+
+}
+
+.submission{
+
+    color:#9333ea;
+
+}
+
+.viva{
+
+    color:#ea580c;
+
+}
+
+.marks{
+
+    color:#ca8a04;
+
+}
+
+.announcement{
+
+    color:#0ea5e9;
+
+}
+
+/* ==========================================
+        EMPTY NOTIFICATION
+========================================== */
+
+.empty-notification{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:60px 30px;
+
+    text-align:center;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+.empty-icon{
+
+    font-size:70px;
+
+    color:#cbd5e1;
+
+    margin-bottom:20px;
+
+}
+
+.empty-notification h2{
+
+    color:#1f2937;
+
+    margin-bottom:10px;
+
+}
+
+.empty-notification p{
+
+    color:#64748b;
+
+    margin-bottom:10px;
+
+}
+
+.empty-notification span{
+
+    color:#94a3b8;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.notification-card{
+
+    flex-direction:column;
+
+}
+
+.notifications-container{
+
+    padding:20px;
+
+}
+
+.page-title{
+
+    font-size:24px;
+
+}
+
+}

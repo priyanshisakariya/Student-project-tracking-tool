@@ -1,0 +1,118 @@
+/* =====================================================
+   ADMIN LAYOUT
+===================================================== */
+
+.admin-layout {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    background: #f5f7fb;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   MAIN AREA
+===================================================== */
+
+.main {
+    margin-left: 270px;
+
+    width: calc(100% - 270px);
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #f5f7fb;
+
+    box-sizing: border-box;
+
+    transition:
+        margin-left 0.3s ease,
+        width 0.3s ease;
+}
+
+
+/* =====================================================
+   SIDEBAR OPEN
+===================================================== */
+
+.admin-layout.sidebar-open .main {
+
+    margin-left: 270px;
+
+    width: calc(100% - 270px);
+
+}
+
+
+/* =====================================================
+   SIDEBAR CLOSED
+===================================================== */
+
+.admin-layout.sidebar-closed .main {
+
+    margin-left: 0;
+
+    width: 100%;
+
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content {
+
+    flex: 1;
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+
+    overflow-y: auto;
+
+    background: #f5f7fb;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .main {
+
+        margin-left: 0 !important;
+
+        width: 100% !important;
+
+    }
+
+    .content {
+
+        padding: 20px;
+
+    }
+
+}

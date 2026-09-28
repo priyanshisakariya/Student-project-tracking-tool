@@ -1,0 +1,142 @@
+/* ==========================
+   HOME PAGE
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* Hero Section */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:120px 20px 80px;
+
+    background-image:url("./assets/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* Center Card */
+
+.hero-left{
+
+    width:100%;
+    max-width:1000px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,0.22);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,0.35);
+
+    border-radius:25px;
+
+    padding:60px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+/* Heading */
+
+.hero-left h1{
+
+    font-size:55px;
+    font-weight:700;
+    color:#0F2342;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+}
+
+/* Paragraph */
+
+.hero-left p{
+
+    font-size:18px;
+
+    color:#44556C;
+
+    line-height:1.9;
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+}
+
+/* Button */
+
+.hero-left button{
+
+    padding:16px 42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2F80ED;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.hero-left button:hover{
+
+    background:#1565D8;
+
+    transform:translateY(-3px);
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero{
+
+padding:120px 20px 60px;
+
+}
+
+.hero-left{
+
+padding:35px 25px;
+
+}
+
+.hero-left h1{
+
+font-size:36px;
+
+}
+
+.hero-left p{
+
+font-size:16px;
+
+}
+
+}

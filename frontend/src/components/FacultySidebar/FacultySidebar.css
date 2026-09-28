@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar{
+    width:290px;
+    min-width:270px;
+    height:100vh;
+    background:#173B63;
+    display:flex;
+    flex-direction:column;
+    box-shadow:3px 0 15px rgba(0,0,0,.15);
+    transition:.3s;
+    overflow:hidden;
+}
+
+/* Close Sidebar */
+
+.sidebar.close{
+    width:0;
+    min-width:0;
+    overflow:hidden;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.sidebar-header{
+    height:75px;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    box-sizing:border-box;
+    flex-shrink:0;
+    overflow:hidden;
+}
+
+.sidebar-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#ffffff;
+    white-space:nowrap;
+}
+
+.project-logo-icon{
+    font-size:28px;
+    color:#ffffff;
+    flex-shrink:0;
+}
+
+.sidebar-title{
+    font-size:24px;
+    font-weight:700;
+    color:#ffffff;
+    white-space:nowrap;
+    letter-spacing:-0.3px;
+    margin:0;
+}
+
+/* ==========================================
+   MENU
+========================================== */
+
+.sidebar-menu{
+    flex:1;
+    padding:20px 15px;
+    overflow-y:auto;
+}
+
+.sidebar-menu a{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    padding:14px 18px;
+
+    margin-bottom:10px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.sidebar-menu a svg{
+
+    font-size:20px;
+
+    min-width:22px;
+
+}
+
+/* Hover */
+
+.sidebar-menu a:hover{
+
+    background:#2F80ED;
+
+    color:#ffffff;
+
+    transform:translateX(5px);
+
+}
+
+/* Active */
+
+.sidebar-menu a.active{
+
+    background:#2F80ED;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.logout-area{
+
+    padding:20px 15px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+}
+
+.logout-area a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.logout-area a:hover{
+
+    background:#dc2626;
+
+    color:#ffffff;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.sidebar-menu::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb{
+
+    background:rgba(255,255,255,.30);
+
+    border-radius:10px;
+
+}
+
+.sidebar-menu::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+}

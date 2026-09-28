@@ -1,0 +1,324 @@
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 270px;
+  height: 100vh;
+
+  background: #163A63;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  z-index: 1000;
+
+  box-sizing: border-box;
+
+  transition: transform 0.3s ease, width 0.3s ease, visibility 0.3s ease;
+}
+
+
+/* ===========================
+   HIDE SCROLLBAR
+=========================== */
+
+.sidebar::-webkit-scrollbar {
+  width: 0;
+}
+
+.sidebar {
+  scrollbar-width: none;
+}
+
+
+/* ===========================
+   COLLAPSE
+=========================== */
+
+.sidebar.close {
+  transform: translateX(-100%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+/* ===========================
+   HEADER
+=========================== */
+
+.sidebar-header {
+  width: 100%;
+
+  min-height: 85px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ===========================
+   REACT LOGO
+=========================== */
+
+.sidebar-logo-icon {
+  width: 46px;
+  height: 46px;
+
+  min-width: 46px;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  color: #163A63;
+
+  border-radius: 11px;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  flex-shrink: 0;
+
+  box-sizing: border-box;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Logo Hover */
+
+.sidebar-logo-icon:hover {
+  background: #2D6CDF;
+
+  color: #ffffff;
+
+  transform: scale(1.05);
+}
+
+
+/* ===========================
+   SIDEBAR TITLE
+=========================== */
+
+.sidebar-title {
+  margin: 0;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+
+  white-space: nowrap;
+
+  line-height: 1.2;
+}
+
+
+/* Hide title when collapsed */
+
+.sidebar.close .sidebar-title {
+  display: none;
+}
+
+
+/* Center logo when collapsed */
+
+.sidebar.close .sidebar-header {
+  justify-content: center;
+
+  padding: 20px 10px;
+}
+
+
+/* Collapsed logo */
+
+.sidebar.close .sidebar-logo-icon {
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+  min-height: 44px;
+
+  font-size: 23px;
+
+  border-radius: 10px;
+}
+
+
+/* ===========================
+   MENU
+=========================== */
+
+.sidebar-menu {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 12px;
+
+  box-sizing: border-box;
+}
+
+
+/* ===========================
+   MENU LINKS
+=========================== */
+
+.sidebar-menu a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  text-decoration: none;
+
+  color: #D7E3F3;
+
+  padding: 13px 16px;
+
+  margin-bottom: 8px;
+
+  border-radius: 12px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+
+/* ===========================
+   HOVER
+=========================== */
+
+.sidebar-menu a:hover {
+  background: #2D6CDF;
+
+  color: #ffffff;
+
+  transform: translateX(3px);
+}
+
+
+/* ===========================
+   ACTIVE
+=========================== */
+
+.sidebar-menu a.active {
+  background: #2D6CDF;
+
+  color: #ffffff;
+}
+
+
+/* ===========================
+   ICONS
+=========================== */
+
+.icon,
+.sidebar-icon {
+  width: 22px;
+  height: 22px;
+
+  min-width: 22px;
+
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+
+/* ===========================
+   COLLAPSED MENU
+=========================== */
+
+.sidebar.close span {
+  display: none;
+}
+
+.sidebar.close .sidebar-menu {
+  padding: 20px 10px;
+}
+
+.sidebar.close .sidebar-menu a {
+  justify-content: center;
+
+  gap: 0;
+
+  padding: 13px 10px;
+}
+
+.sidebar.close .sidebar-menu a:hover {
+  transform: none;
+}
+
+
+/* ===========================
+   LOGOUT
+=========================== */
+
+.sidebar-menu a:last-child {
+  margin-top: auto;
+
+  background: #123052;
+}
+
+.sidebar-menu a:last-child:hover {
+  background: #2D6CDF;
+
+  color: #ffffff;
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 270px;
+  }
+
+  .sidebar.open {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+  }
+}

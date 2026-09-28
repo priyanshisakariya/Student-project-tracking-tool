@@ -1,0 +1,104 @@
+/* App.css */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Allow complete page scrolling */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Main app wrapper */
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* Remove Vite default demo styles */
+.counter {
+  display: none;
+}
+
+
+/* Hero section */
+.hero {
+  position: relative;
+}
+
+
+/* Center content */
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+}
+
+
+/* Next steps section */
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+}
+
+#next-steps > div {
+  flex: 1 1 0;
+  padding: 32px;
+}
+
+
+#docs {
+  border-right: 1px solid var(--border);
+}
+
+
+/* Spacer */
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+  #center {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+
+
+  #next-steps {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  #next-steps > div {
+    padding: 24px 20px;
+  }
+
+
+  #docs {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+
+  #spacer {
+    height: 48px;
+  }
+
+}

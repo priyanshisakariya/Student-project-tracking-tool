@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar {
+    width: 290px;
+    min-width: 290px;
+
+    height: 100vh;
+
+    background: #173B63;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.15);
+
+    transition: width 0.3s ease,
+                min-width 0.3s ease;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   OPEN SIDEBAR
+========================================== */
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+
+/* ==========================================
+   CLOSE SIDEBAR
+========================================== */
+
+.sidebar.close {
+    width: 0;
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   SIDEBAR HEADER / BRAND
+========================================== */
+
+.stu-sidebar-header {
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 20px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   REACT LOGO
+========================================== */
+
+.campus-react-logo {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    color: #61DAFB;
+
+    flex-shrink: 0;
+
+    display: block;
+}
+
+
+/* ==========================================
+   CAMPUS PROJECT TITLE
+========================================== */
+
+.sidebar-title {
+    margin: 0;
+
+    padding: 0;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* CampusProject Text */
+
+.sidebar-title {
+    margin: 0;
+
+    padding: 0;
+
+    color: #ffffff;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
+}
+/* ==========================================
+   MENU
+========================================== */
+
+.stu-sidebar-menu {
+    flex: 1;
+
+    padding: 20px 15px;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+}
+
+
+/* Menu Links */
+
+.stu-sidebar-menu a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    padding: 14px 18px;
+
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+
+    white-space: nowrap;
+}
+
+
+/* Icons */
+
+.stu-sidebar-menu a svg {
+    font-size: 20px;
+
+    min-width: 22px;
+
+    flex-shrink: 0;
+}
+
+
+/* Hover */
+
+.stu-sidebar-menu a:hover {
+    background: #2F80ED;
+
+    color: #ffffff;
+
+    transform: translateX(5px);
+}
+
+
+/* Active */
+
+.stu-sidebar-menu a.active {
+    background: #2F80ED;
+
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.stu-logout-area {
+    padding: 20px 15px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    flex-shrink: 0;
+}
+
+
+.stu-logout-area a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    padding: 14px 18px;
+
+    border-radius: 12px;
+
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+
+    white-space: nowrap;
+}
+
+
+/* Logout Hover */
+
+.stu-logout-area a:hover {
+    background: #dc2626;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.stu-sidebar-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+.stu-sidebar-menu::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.30);
+
+    border-radius: 10px;
+}
+
+
+.stu-sidebar-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 270px;
+        min-width: 270px;
+    }
+
+}
+
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.project-logo-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f8fd;
+    overflow:auto;
+}
+
+/* ==========================================
+   MAIN LAYOUT
+========================================== */
+
+.portal{
+    display:flex;
+    width:100%;
+    height:100vh;
+    background:#f4f8fd;
+}
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
+
+.main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    background:#f4f8fd;
+}
+
+/* ==========================================
+   PAGE CONTENT
+========================================== */
+
+.content{
+    flex:1;
+    padding:30px;
+    overflow-y:auto;
+    background:#f4f8fd;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.content::-webkit-scrollbar{
+    width:8px;
+}
+
+.content::-webkit-scrollbar-thumb{
+    background:#b7c8e8;
+    border-radius:10px;
+}
+
+.content::-webkit-scrollbar-track{
+    background:#eef4ff;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+.portal{
+    position:relative;
+}
+
+.main{
+    width:100%;
+}
+
+.content{
+    padding:20px;
+}
+
+}

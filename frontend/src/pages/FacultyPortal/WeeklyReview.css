@@ -1,0 +1,202 @@
+.weekly-page{
+    padding:30px;
+    background:#f5f7fb;
+    min-height:100vh;
+}
+
+.weekly-header h1{
+    font-size:30px;
+    color:#1f2937;
+}
+
+.weekly-header p{
+    color:#666;
+    margin-top:5px;
+    margin-bottom:25px;
+}
+
+.weekly-toolbar{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+}
+
+.weekly-toolbar input,
+.weekly-toolbar select{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.weekly-toolbar input{
+    flex:1;
+}
+
+.weekly-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:20px;
+}
+
+.weekly-card{
+    background:white;
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.weekly-card:hover{
+    transform:translateY(-5px);
+}
+
+.weekly-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.submitted,
+.pending{
+    padding:6px 12px;
+    color:white;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.submitted{
+    background:#27ae60;
+}
+
+.pending{
+    background:#f39c12;
+}
+
+.progress-bar{
+    width:100%;
+    height:24px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+    margin:18px 0;
+}
+
+.progress-fill{
+    height:100%;
+    background:#2f80ed;
+    color:white;
+    text-align:center;
+    line-height:24px;
+    font-size:13px;
+}
+
+.view-btn{
+    width:100%;
+    padding:12px;
+    background:#2f80ed;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.view-btn:hover{
+    background:#1768d6;
+}
+
+.modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.weekly-modal{
+    width:750px;
+    max-width:95%;
+    background:white;
+    border-radius:14px;
+    padding:30px;
+    animation:popup .25s ease;
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.weekly-modal h4{
+    margin-top:18px;
+    color:#1f2937;
+}
+
+.weekly-modal p{
+    color:#555;
+    line-height:1.6;
+}
+
+.weekly-modal a{
+    color:#2f80ed;
+    text-decoration:none;
+}
+
+.weekly-modal textarea{
+    width:100%;
+    height:120px;
+    resize:none;
+    margin-top:10px;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    outline:none;
+}
+
+.modal-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.approve-btn,
+.improve-btn{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    color:white;
+    cursor:pointer;
+}
+
+.approve-btn{
+    background:#27ae60;
+}
+
+.improve-btn{
+    background:#f39c12;
+}
+
+.close-btn{
+    width:100%;
+    margin-top:18px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#555;
+    color:white;
+    cursor:pointer;
+}
+
+.close-btn:hover{
+    background:#333;
+}

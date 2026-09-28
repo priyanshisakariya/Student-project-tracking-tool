@@ -1,0 +1,218 @@
+/* ===============================
+   SERVICES PAGE
+==================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+.services{
+
+    min-height:100vh;
+
+    padding:120px 8% 70px;
+
+    background-image:url("./assets/background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+}
+
+/* Container */
+
+.services-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* Heading */
+
+.services h1{
+
+    text-align:center;
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:#173B63;
+
+    margin-bottom:20px;
+
+}
+
+/* Intro */
+
+.services-intro{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:0 auto 55px;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#475569;
+
+}
+
+/* Cards Grid */
+
+.service-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+/* Card */
+
+.service-card{
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* Hover */
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+/* Icon */
+
+.service-icon{
+
+    font-size:48px;
+
+    color:#2F80ED;
+
+    margin-bottom:18px;
+
+    transition:.3s;
+
+}
+
+.service-card:hover .service-icon{
+
+    transform:scale(1.15);
+
+    color:#173B63;
+
+}
+
+/* Title */
+
+.service-card h2{
+
+    color:#173B63;
+
+    font-size:25px;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+}
+
+/* Paragraph */
+
+.service-card p{
+
+    color:#475569;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.services{
+
+padding:110px 25px 60px;
+
+}
+
+.services h1{
+
+font-size:38px;
+
+}
+
+.services-intro{
+
+font-size:16px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.service-cards{
+
+grid-template-columns:1fr;
+
+}
+
+.service-card{
+
+padding:28px;
+
+}
+
+.service-card h2{
+
+font-size:22px;
+
+}
+
+.service-icon{
+
+font-size:42px;
+
+}
+
+}

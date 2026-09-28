@@ -1,0 +1,112 @@
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+    background: rgba(5,18,43,0.90);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    color: #FFFFFF;
+
+    padding: 60px 8% 25px;
+}
+
+/* Footer Grid */
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:45px;
+}
+
+/* Headings */
+
+.footer-section h2,
+.footer-section h3{
+    color:#FFFFFF;
+    margin-bottom:20px;
+    font-size:22px;
+    font-weight:600;
+}
+
+/* Paragraph */
+
+.footer-section p{
+    color:#D6E5FF;
+    line-height:1.9;
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+/* Links */
+
+.footer-section a{
+    display:block;
+    text-decoration:none;
+    color:#D6E5FF;
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.footer-section a:hover{
+    color:#53A6FF;
+    padding-left:6px;
+}
+
+/* Divider */
+
+hr{
+    margin:40px 0 20px;
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,.10);
+}
+
+/* Copyright */
+
+.copyright{
+    text-align:center;
+    color:#B9CDE8;
+    font-size:15px;
+}
+.contact-info p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:12px;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+}
+
+.contact-icon{
+
+    color:#2F80ED;
+
+    font-size:18px;
+
+    min-width:20px;
+
+}
+/* Responsive */
+
+@media(max-width:768px){
+
+.footer{
+    text-align:center;
+}
+
+.footer-container{
+    gap:30px;
+}
+
+}
